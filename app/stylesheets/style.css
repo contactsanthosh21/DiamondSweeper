@@ -1,0 +1,110 @@
+body{
+  margin:0;
+  padding: 0;
+  height: 100%;
+  width:100%;
+  background-color: #17ace8;
+}
+.innerContainer{
+    width:6%;
+    height:6%;
+    display: inline-block;
+    border: solid 4px grey;
+    margin: 0px 2px 2px 0px;
+    padding: 1%;
+    background-color: #ececb1;
+}
+.question,.diamond,.left,.right,.up,.down{
+  height:100%;
+  width:100%;
+}
+.question{
+  background: url('./question.svg') no-repeat center;
+}
+.diamond{
+  background: url('./diamond.svg') no-repeat center;
+}
+.up{
+  background: url('./arrow.svg') no-repeat center;
+  transform: rotate(90deg);
+}
+.down{
+  background: url('./arrow.svg') no-repeat center;
+  transform: rotate(-90deg);
+}
+.left{
+  background: url('./arrow.svg') no-repeat center;
+}
+.right{
+  background: url('./arrow.svg') no-repeat center;
+  transform: rotate(180deg);
+}
+
+#container{
+  text-align: center;
+  margin-top: 10px;
+}
+h2{
+  font-weight: bold;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  padding-top: 8px;
+  margin: 0;
+}
+
+#popUp{
+    position: fixed; 
+    display: none; 
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); 
+    z-index: 2;  
+}
+#popUpContent {
+    background-color: #fefefe;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border: 1px solid #888;
+    width: 40%;
+    height:40%;
+}
+#popUpContent p{
+   margin-top: 10%;
+   font-weight: bold;
+   font-size: 20px;
+   font-family: sans-serif;
+   color: grey;
+}
+#popUpContent span{
+  font-size: 30px;
+  color:#009688;
+  margin-top: 1px;
+}
+button{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 6%;
+    cursor: pointer;
+    border-radius: 12px;
+}
+button:hover {
+    border: 2px solid #4CAF50;
+    background-color:white;
+    color: #4CAF50;
+}

@@ -16,8 +16,10 @@ const BABEL_PRESET = {
 
 module.exports = {
     entry: {
-      app: "./app/client/app.js",
-      style: "./app/stylesheets/style.scss"
+      'modules/app': "./app/client/app.js",
+      'modules/main':"./app/client/main.js",
+      "css/style": "./app/stylesheets/style.css"
+      
     },
     output: {
         path: OUTPUT_DIRECTORY,
@@ -28,9 +30,9 @@ module.exports = {
       rules: [
         { test: /\.jsx?$/, exclude: /node_modules/, use: BABEL_PRESET },
         { test: /\.jsx?$/, include: /node_modules\/quintype-toddy-libs/, use: BABEL_PRESET },
-        { test: /\.(sass|scss)$/, loader: ExtractTextPlugin.extract('css-loader!sass-loader') },
+        { test: /\.(sass|scss|css)$/, loader: ExtractTextPlugin.extract('css-loader!sass-loader') },
         {
-          test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
+          test: /\.(?:png|jpg|svg)$/,
           loader: "file-loader",
           query: {
             context: './app/assets',
