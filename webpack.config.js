@@ -3,6 +3,7 @@ const process = require('process');
 const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PUBLIC_PATH='/assets/';
 const OUTPUT_DIRECTORY = __dirname + `/public/${PUBLIC_PATH}`;
@@ -19,7 +20,6 @@ module.exports = {
       'modules/app': "./app/client/app.js",
       'modules/main':"./app/client/main.js",
       "css/style": "./app/stylesheets/style.css"
-      
     },
     output: {
         path: OUTPUT_DIRECTORY,
@@ -41,5 +41,6 @@ module.exports = {
         }
       ]
     },
-    plugins: [new ExtractTextPlugin({ filename: "[name].css", allChunks: true })]
+    plugins: [new ExtractTextPlugin({ filename: "[name].css", allChunks: true }),new CopyWebpackPlugin([
+      { from: 'app/stylesheets/', to: 'img/',ignore: [ '*.css' ] }])]
 };

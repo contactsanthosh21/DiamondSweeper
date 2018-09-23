@@ -55,8 +55,8 @@ window.swap = function (e) {
             diamondArray.splice(index, 1);
         }
         if (diamondArray.length == 0) {
-            $('#popUpContent').html('<p>Your Score : <span>' + score + '</span></p><button onclick="location.reload();">Play Again!!!</button>');
-            $('#popUp').show();
+            $('.modal-title').html('<p>Your Score : <span>' + score + '</span></p>');
+            $('#myModal').modal('show'); 
         }
     }
     else {
@@ -118,7 +118,7 @@ function guideToDiamond(current, id) {
             score--;
         }
     }
-
+    return nearDiamond;
 }
 
-
+export default guideToDiamond;
