@@ -20,7 +20,6 @@ import guideToDiamond from "./guide";
 * None
 */
 window.swap = (e) => {
-    console.log(gridObj.previousArrow);
     if ($('#' + gridObj.previousArrow).children().attr('class') != "diamond") {
         $('#' + gridObj.previousArrow).children().removeClass($('#' + gridObj.previousArrow).children().attr('class'));
     }
