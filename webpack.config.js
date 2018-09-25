@@ -18,7 +18,6 @@ const BABEL_PRESET = {
 module.exports = {
     entry: {
       'modules/app': "./app/client/app.js",
-      // 'modules/main':"./app/client/main.js",
       "css/style": "./app/stylesheets/style.css"
     },
     output: {
