@@ -6,10 +6,10 @@
  *----------*
  * Copyright (c) 2018: 
  * Authors: Santhosh S
- * Creation Date: 24 September, 2018
+ * Creation Date: 26 September, 2018
  */
-import gridObj from './grid';
-import guideToDiamond from "./guide";
+let gridObj = require('./grid');
+let guideToDiamond = require("./guide");
 /*
 * Name: swap
 * Description: Public method which replaces the question mark with diamond on user click.
@@ -19,6 +19,7 @@ import guideToDiamond from "./guide";
 * Globals updated: score
 * None
 */
+
 window.swap = (e) => {
     if ($('#' + gridObj.previousArrow).children().attr('class') != "diamond") {
         $('#' + gridObj.previousArrow).children().removeClass($('#' + gridObj.previousArrow).children().attr('class'));
@@ -44,4 +45,8 @@ window.swap = (e) => {
         guideToDiamond(currentPosition, id);
     }
 }
+<<<<<<< HEAD
+module.exports=window.swap;
+=======
 export default window.swap;
+>>>>>>> 4f8dbc17bfe2cca2803e003c76e04a7a5cc20d4a

@@ -6,7 +6,7 @@
  *----------*
  * Copyright (c) 2018: 
  * Authors: Santhosh S
- * Creation Date: 24 September, 2018
+ * Creation Date: 26 September, 2018
  */
 /*
 * Name: grid
@@ -21,9 +21,8 @@ function grid() {
     this.diamondArray = [];
     this.score = 64;
     this.content = "";
-    this.count = 1;
+    this.count = 0;
     this.previousArrow;
-
     while (this.diamondArray.length < 8) {
       let diamondPosition = Math.ceil(Math.random() * 64);
       if (this.diamondArray.indexOf(diamondPosition) > -1) continue;
@@ -31,8 +30,8 @@ function grid() {
     }
     for (let row = 0; row < 8; row++) {
       for (let column = 0; column < 8; column++) {
-        this.content += "<div class='innerContainer' id='" + this.count + "' value='[" + (row + 1) + '][' + (column + 1) + "]' onclick='swap(this)'><div class='question'></div></div>";
         this.count += 1;
+        this.content += "<div class='innerContainer' id='" + this.count + "' value='[" + (row + 1) + '][' + (column + 1) + "]' onclick='swap(this)'><div class='question'></div></div>";
       }
       this.content += "<br>"
     }
@@ -40,4 +39,4 @@ function grid() {
 };
 
 let gridObj = new grid();
-export default gridObj;
+module.exports=gridObj;

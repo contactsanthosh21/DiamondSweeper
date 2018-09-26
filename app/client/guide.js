@@ -6,9 +6,9 @@
  *----------*
  * Copyright (c) 2018: 
  * Authors: Santhosh S
- * Creation Date: 24 September, 2018
+ * Creation Date: 26 September, 2018
  */
-import gridObj from './grid';
+let gridObj = require('./grid');
 /*
 * Name: guideToDiamond
 * Description: Public method which replaces the question mark with diamond on user click.
@@ -65,4 +65,4 @@ let guideToDiamond = (current, id) => {
 
 }
 
-export default guideToDiamond;
+module.exports=guideToDiamond;
