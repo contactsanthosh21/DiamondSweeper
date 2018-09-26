@@ -45,8 +45,5 @@ window.swap = (e) => {
         guideToDiamond(currentPosition, id);
     }
 }
-<<<<<<< HEAD
 module.exports=window.swap;
-=======
-export default window.swap;
->>>>>>> 4f8dbc17bfe2cca2803e003c76e04a7a5cc20d4a
+
