@@ -87,7 +87,9 @@ h2 {
   text-align: center;
   display: inline-block;
   cursor: pointer;
-  border-radius: 12px; }
+  border-radius: 12px;
+  font-size: 2vw;
+}
 
 .modal-footer button:hover {
   border: 2px solid #4CAF50;
